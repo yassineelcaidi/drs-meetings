@@ -1,6 +1,6 @@
 const url = new URL(location.href)
-console.log(url)
-const roomUrl = new URL("https://funtimes.whereby.com")
+
+const roomUrl = new URL("https://<your-subdomain>.whereby.com")
 roomUrl.pathname = url.pathname
 roomUrl.search = url.search
 
