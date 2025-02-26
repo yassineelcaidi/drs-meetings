@@ -1,6 +1,6 @@
 const url = new URL(location.href)
 
-const roomUrl = new URL("https://drs-meetings.vercel.app")
+const roomUrl = new URL("https://datarockstars.whereby.com")
 roomUrl.pathname = url.pathname
 roomUrl.search = url.search
 
