@@ -1,12 +1,15 @@
-const url = new URL(location.href)
+const url = new URL(location.href);
 
-const roomUrl = new URL("https://datarockstars.whereby.com")
-roomUrl.pathname = url.pathname
-roomUrl.search = url.search
+// Extract the room name from the pathname
+const roomName = url.pathname.split('/').pop(); // Gets the last segment of the pathname
 
-const root = document.getElementById("root")
-const whereby = document.createElement("whereby-embed")
-whereby.setAttribute("room", roomUrl.href)
-whereby.setAttribute("minimal", true)
-whereby.setAttribute("style", "height: 100%;")
-root.appendChild(whereby)
+const roomUrl = new URL("https://datarockstars.whereby.com");
+roomUrl.pathname = roomName; // Set the pathname to the room name
+roomUrl.search = url.search;
+
+const root = document.getElementById("root");
+const whereby = document.createElement("whereby-embed");
+whereby.setAttribute("room", roomUrl.href);
+whereby.setAttribute("minimal", true);
+whereby.setAttribute("style", "height: 100%;");
+root.appendChild(whereby);
