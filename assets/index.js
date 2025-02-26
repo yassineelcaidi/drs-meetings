@@ -9,7 +9,8 @@ roomUrl.search = url.search;
 
 const root = document.getElementById("root");
 const whereby = document.createElement("whereby-embed");
-whereby.setAttribute("room", roomUrl.href);
+whereby.setAttribute("room", roomUrl.href+"/"+roomName);
+console.log(roomUrl.href+"/"+roomName)
 whereby.setAttribute("minimal", true);
 whereby.setAttribute("style", "height: 100%;");
 root.appendChild(whereby);
